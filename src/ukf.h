@@ -56,6 +56,9 @@ public:
   // Predict radar measurements
   void PredictRadarMeasurement(VectorXd &z_pred, MatrixXd &S, MatrixXd &Zsig);
 
+  // Predict laser measurements
+  void PredictLidarMeasurement(VectorXd &z_pred, MatrixXd &S, MatrixXd &Zsig);
+
   void UpdateState(MatrixXd &Zsig, VectorXd &z_pred, MatrixXd &S, VectorXd &z,
                    MeasurementPackage::SensorType sensor_type);
 
